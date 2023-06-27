@@ -2,8 +2,8 @@ import java.util.*;
 
 public class Problem40 {
 
-    public static int sumOfDigits(long n) {
-        int sum = 0;
+    public static long sumOfDigits(long n) {
+        long sum = 0;
         do {
             sum += n % 10;
             n /= 10;
