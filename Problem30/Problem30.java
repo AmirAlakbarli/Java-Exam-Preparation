@@ -1,13 +1,12 @@
 import java.util.*;
 
-public class Problem14 {
+public class Problem30 {
 
-    public static boolean hasSameDigits(int number) {
+    public static boolean hasSameDigit(int number) {
         String numberString = String.valueOf(number);
         int length = numberString.length();
-
-        for (int i = 0; i < length - 1; i++) {
-            char digit = numberString.charAt(i);
+        for (int i = 0; i < length; i++) {
+            int digit = numberString.charAt(i);
 
             for (int j = i + 1; j < length; j++) {
                 if (numberString.charAt(j) == digit)
@@ -20,13 +19,10 @@ public class Problem14 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextInt();
-        int b = scanner.nextInt();
+        int n = scanner.nextInt();
         scanner.close();
 
-        for (int i = a; i <= b; i++) {
-            if (hasSameDigits(i))
-                System.out.print(i + " ");
-        }
+        System.out.println(hasSameDigit(n) ? "YES" : "NO");
+
     }
 }
